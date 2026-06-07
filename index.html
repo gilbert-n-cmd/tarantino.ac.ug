@@ -741,6 +741,26 @@ flex: 1 1 100%;
         color: #004080;
     }
   }
+
+   /* FIX STACKING ORDER */
+header, nav {
+  position: relative;
+  z-index: 9999;
+}
+
+nav .dropdown-content {
+  z-index: 10000;
+}
+
+/* FIX SLIDER OVERLAP */
+.slider {
+  margin-top: 0;
+}
+
+/* OPTIONAL: prevent weird overflow */
+body {
+  overflow-x: hidden;
+}
   </style>
 </head>
 <div class="background-container" id="bg-container">
